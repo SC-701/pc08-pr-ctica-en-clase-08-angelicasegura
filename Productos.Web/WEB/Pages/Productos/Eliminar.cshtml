@@ -1,0 +1,68 @@
+﻿@page
+@model WEB.Pages.Productos.EliminarModel
+@{
+}
+
+<h1>Eliminar Producto</h1>
+
+<div class="container">
+    <form method="post">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        @Model.producto.Nombre
+                    </h5>
+
+                    <p class="card-text">
+                        <div>
+                            <b>Descripción:</b>
+                            @Model.producto.Descripcion
+                        </div>
+
+                        <div>
+                            <b>Precio:</b>
+                            ₡ @Model.producto.Precio
+                        </div>
+
+                        <div>
+                            <b>Precio USD:</b>
+                            $ @Model.producto.PrecioUSD
+                        </div>
+
+                        <div>
+                            <b>Stock:</b>
+                            @Model.producto.Stock
+                        </div>
+
+                        <div>
+                            <b>Categoría:</b>
+                            @Model.producto.Categoria
+                        </div>
+
+                        <div>
+                            <b>Subcategoría:</b>
+                            @Model.producto.SubCategoria
+                        </div>
+
+                        <div>
+                            <b>Código de barras:</b>
+                            @Model.producto.CodigoBarras
+                        </div>
+                    </p>
+
+                </div>
+            </div>
+
+            <br />
+
+            <a class="btn btn-primary" asp-page="./Index">Regresar</a>
+
+            <button type="submit" class="btn btn-danger">
+                Eliminar
+            </button>
+
+        </div>
+    </form>
+</div>
